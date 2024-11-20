@@ -1,6 +1,7 @@
 # Frontend Project
 
 [DEMO](https://herostation.vercel.app/)
+![Project Screenshot](https://drive.google.com/uc?id=1EQmnDKCoe3mTeMpQvaoLEya1mN9YHBqa)
 
 This project is a frontend application built using React, TypeScript, Vite, Tailwind CSS, and Material UI.
 
