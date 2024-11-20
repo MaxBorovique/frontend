@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { useAppDispatch } from "../utils/customHooks";
 import { getAllHeroes } from "../store/slices/heroesSlice";
 import { useNavigate } from "react-router-dom";
+import config from "../config";
 
 interface Props {
   setAdding: (prev: boolean) => void;
@@ -35,7 +36,7 @@ export const AddHeroForm: React.FC<Props> = ({setAdding}) => {
     });
   
     try {
-      const response = await fetch("http://localhost:1000/api/cards/", {
+      const response = await fetch(`${config.BASE_URL}/api/cards/`, {
         method: "POST",
         body: formData,
       });

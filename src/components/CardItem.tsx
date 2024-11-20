@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card } from "../types/Card";
+import config from "../config";
 
 interface CardItemProps {
   card: Card;
@@ -16,7 +17,7 @@ export const CardItem: React.FC<CardItemProps> = ({ card }) => {
       <div className="flex flex-col justify-between p-2">
         <div className="mx-auto rounded-x min-w-[272px] h-[180px] 2xl:min-w-[237px] md:max-w-[268px] sm:min-w-[272px]  mb-3 overflow-hidden">
           <img
-            src={`http://localhost:1000/${mainImage}`}
+            src={`${config.BASE_URL}/${mainImage}`}
             alt="The image of Superhero"
             className="object-cover w-full h-full"
           />

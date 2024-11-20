@@ -1,7 +1,7 @@
 import axios from 'axios';
+import config from '../config';
 
 const client = axios.create({
-  baseURL: 'http://localhost:1000/api/cards/'
+  baseURL: `${config.BASE_URL}/api/cards/`
 });
-
 export default client;

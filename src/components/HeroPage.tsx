@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../utils/customHooks";
 import { deleteHero, getOneHero } from "../store/slices/heroesSlice";
 import { Container } from "./Container";
 import { EditHeroForm } from "./EditHeroForm";
-
+import config from "../config";
 export const HeroPage = () => {
   const { id } = useParams<{ id: string }>();
   const dispatch = useAppDispatch();
@@ -23,7 +23,7 @@ export const HeroPage = () => {
 
   useEffect(() => {
     if (hero && hero?.images?.length > 0) {
-      setMainImage(`http://localhost:1000/${hero.images[0]}`);
+      setMainImage(`${config.BASE_URL}/${hero.images[0]}`);
     }
   }, [hero])
 
@@ -35,7 +35,7 @@ export const HeroPage = () => {
   };
 
   const handleMainImageChange = (image: string) => {
-    setMainImage(`http://localhost:1000/${image}`);
+    setMainImage(`${config.BASE_URL}/${image}`);
   };
 
   return (
@@ -62,7 +62,7 @@ export const HeroPage = () => {
                       <img
                         onClick={() => handleMainImageChange(image)}
                         className="object-cover w-[110px] h-[84px] rounded-x flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity duration-300"
-                        src={`http://localhost:1000/${image}`}
+                        src={`${config.BASE_URL}/${image}`}
                         alt={`${hero.nickname || "Hero"} image ${index + 1}`}
                       />
                     </div>
