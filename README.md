@@ -3,6 +3,7 @@
 # Frontend Project
 
 [DEMO](https://herostation.vercel.app/)
+[DEMO](https://herostation.vercel.app/)
 
 Цей проект є фронтенд-додатком, створеним з використанням React, TypeScript, Vite, Tailwind CSS та Material UI.
 
